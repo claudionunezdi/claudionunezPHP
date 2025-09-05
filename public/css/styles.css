@@ -1,0 +1,151 @@
+/* Base: tipografía, tamaño y fondo */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor: ancho máximo y centrado */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+
+}
+
+/* Tarjeta del formulario: marco y sombra */
+.card {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #000;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Título centrado */
+h1 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+/* Filas en dos columnas con separación */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    /* separa columnas (Código | Nombre) */
+    row-gap: 16px;
+    margin-bottom: 16px;
+}
+
+
+.form-group {
+    min-width: 0;
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: .35rem;
+}
+
+.hint {
+    display: block;
+    font-size: .85rem;
+    color: #666;
+    margin-top: .25rem;
+}
+
+/* Controles: marco, radio y sombra sutil */
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .6rem .7rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Enfocado: borde y halo accesible */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1aab8a;
+    box-shadow: 0 0 0 3px rgba(26, 171, 138, 0.15);
+}
+
+/* Fieldset de materiales: tarjeta con marco+sombra */
+.field-card {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+.field-card>legend {
+    font-weight: bold;
+    padding: 0 .5rem;
+}
+
+/* Chips de materiales (checkboxes) */
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1rem;
+}
+
+.checkboxes label {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 999px;
+   
+    padding: .35rem .7rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Botón guardar: color, sombra y feedback */
+.btn-guardar {
+    display: inline-block;
+    width: 100%;
+    padding: .85rem;
+    font-size: 16px;
+    
+    background: #1aab8a;
+
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: .75rem;
+    box-shadow: 0 4px 14px rgba(26, 171, 138, 0.25);
+    transition: transform .05s ease, opacity .15s ease;
+}
+
+.btn-guardar:hover {
+    opacity: .95;
+}
+
+.btn-guardar:active {
+    transform: translateY(1px);
+}
+
+/* Responsive: apila columnas en pantallas angostas */
+@media (max-width: 720px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
