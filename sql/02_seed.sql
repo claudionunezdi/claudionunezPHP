@@ -22,7 +22,7 @@ INSERT INTO sucursales (nombre, bodega_id) VALUES
 ('Sucursal 6', 3)
 ON CONFLICT DO NOTHING;
 
--- Monedas
+-- Monedas Codigo en ISO
 INSERT INTO monedas (codigo, nombre) VALUES
 ('USD', 'Dólar estadounidense'),
 ('EUR', 'Euro'),
