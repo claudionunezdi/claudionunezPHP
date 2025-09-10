@@ -24,10 +24,13 @@ Contraseña: pgadmin
 >Cargar archivos SQL en carpetas sql
 cd sql
 >luego aplicar los archivos sql
-psql -U postgres -d productos_db -f sql/01_schema.sql
+psql -U postgres -d productos_db -f /01_schema.sql
 >Ingresar contraseña<
-psql -U postgres -d productos_db -f sql/02_seed.sql
+psql -U postgres -d productos_db -f /02_seed.sql
 >Ingresar Contraseña<
+
+cd ..
+
 
 >Para cargar la aplicacion Desde la raiz del proyecto:
 php -S localhost:8000 router.php -t .

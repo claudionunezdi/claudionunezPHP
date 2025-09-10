@@ -79,7 +79,7 @@ try {
             $descripcion = $payload['descripcion'] ?? '';
             $materiales  = $payload['materiales']  ?? [];
 
-            // Validaciones espejo
+            // Validaciones
             if ($msg = validate_codigo($codigo)) {
                 json_out(['ok' => false, 'error' => $msg], 400);
             }
